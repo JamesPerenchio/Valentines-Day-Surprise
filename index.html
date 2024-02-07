@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Card</title>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <button onclick="addConfetti()">Click!</button>
+    <div id="confetti-container"></div>
+    <div class="valentines-day-card">
+        <input id="open" type="checkbox">
+        <label class="open" for="open"></label>
+        <div class="card-front">
+            <div class="note">Click to Open</div>
+        </div>
+        <div class="card-inside-left"></div>
+        <div class="card-inside">
+            <div class="text-one">Happy</div>
+            <div class="heart"></div>
+            <div class="smile"></div>
+            <div class="eyes"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0"></script>
+    <script src="script.js"></script>
+</body>
+</html>
