@@ -9,7 +9,9 @@
 .hidden {
   display: none;
 }
-
+.container{
+  text-align: center;
+}
 
 .fade-in-out {
   opacity: 0;

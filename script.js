@@ -25,16 +25,21 @@ document.addEventListener("DOMContentLoaded", function() {
   
     // Function to start animation
     function startAnimation() {
-      animateText("1text", 0); // Initial animation
-  
-      // Hide the "Press to Start" button after it's pressed
-      var startButton = document.getElementById("startButton");
-      if (startButton) {
-        startButton.style.display = "none";
-        document.getElementById("backgroundMusic").play();
-        document.getElementById("hiddenImage").style.display = "block";
-      }
+        animateText("1text", 0); // Initial animation
+    
+        // Hide the text and button after "Press to Start" is pressed
+        var textElement = document.getElementById("page1txt");
+        var startButton = document.getElementById("startButton");
+    
+        if (textElement && startButton) {
+            textElement.style.display = "none";
+            startButton.style.display = "none";
+    
+            document.getElementById("backgroundMusic").play();
+            document.getElementById("hiddenImage").style.display = "block";
+        }
     }
+    
   
     // Function to check the selected date
     function checkDate() {
@@ -56,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Function to submit the form
     function submitForm() {
       confirm("Thank you for your response! Your input has been received. Here's a reward for your participation.");
-      
+      window.location.href = 'page2.html';
       // You can add any further actions or page transitions here if needed
     }
   
