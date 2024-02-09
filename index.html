@@ -4,27 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valentine's Day Card</title>
-    <!-- Link to your CSS file -->
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    
 </head>
 <body>
-    <button onclick="addConfetti()">Click!</button>
-    <div id="confetti-container"></div>
-    <div class="valentines-day-card">
-        <input id="open" type="checkbox">
-        <label class="open" for="open"></label>
-        <div class="card-front">
-            <div class="note">Click to Open</div>
-        </div>
-        <div class="card-inside-left"></div>
-        <div class="card-inside">
-            <div class="text-one">Happy</div>
-            <div class="heart"></div>
-            <div class="smile"></div>
-            <div class="eyes"></div>
-        </div>
-    </div>
+  <h1>to add: instructions on enabling sound before pressing start.</h1>
+  <button id="startButton" onclick="startAnimation()">Press to Start</button>
 
+
+    <img id="hiddenImage" src="1gif.gif" style="height: 300px; width: 300px; display: none;">
+    <h1 id="1text" class="fade-in-out hidden">Hi!</h1>
+    <h1 id="2text" class="fade-in-out hidden">My name is James!</h1>
+    <h1 id="3text" class="fade-in-out hidden" style="text-align: center;">I have a couple questions to ask, <br> and I was wondering if you <br> could answer them for me...</h1>
+    <h1 id="4text" class="fade-in-out hidden">First question. What day is it today?</h1>
+  
+    <div id="calendar-container" class="hidden">
+      <h2>What is todays date?  </h2>
+      <input type="date" id="selectedDate">
+      <button onclick="checkDate()">Proceed</button>
+      <p id="warningMessage" class="hidden">Wrong date selected. Please choose February 14, 2024.</p>
+    </div>
+    
+      <div id="form-container" class="hidden">
+        <h2>  What is the significance of today?</h2>
+        <form>
+          <input type="text" placeholder="Type here...">
+          <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+      </div>
+
+      <audio id="backgroundMusic" loop>
+        <source src="music.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+      </audio>
+
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0"></script>

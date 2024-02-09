@@ -1,5 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
 
+#calendar-container,
+#form-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.fade-in-out {
+  opacity: 0;
+  animation: fadeInOut 10s infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  25%, 75% {
+    opacity: 1;
+  }
+}
+
+
 body {
   height: 100vh;
   display: flex;
@@ -116,7 +142,7 @@ input#open {
 }
 
 
-.text-one {
+.text-one{
   position: absolute;
   color: #333;
   font-size: 30px;
@@ -125,7 +151,7 @@ input#open {
   text-align: center;
 }
 
-.text-one:before, .text-one:after {
+.text-one:before, .text-one:after,.text-two:before {
   position: absolute;
   left:5px;
   text-align: center;
@@ -139,8 +165,17 @@ input#open {
 }
 
 .text-one:after {
-  content:"day!";
+  content:"day pookie wookie❤️";
   top:60px;
+}
+
+.text-two:before {
+  position: absolute;
+  color: #333;
+  font-size: 30px;
+  top:100px;
+  width:300px;
+  text-align: center;
 }
 
 
