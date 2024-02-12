@@ -47,11 +47,13 @@ document.addEventListener("DOMContentLoaded", function () {
       // Hide the text and button after "Press to Start" is pressed
       var textElement = document.getElementById("page1txt");
       var startButton = document.getElementById("startButton");
+      var quote = document.getElementById("page1quote");
   
       if (textElement && startButton) {
         document.getElementById("hiddenImage").style.display = "block";
         textElement.style.display = "none";
         startButton.style.display = "none";
+        quote.style.display ="none";
       }
     }
   
